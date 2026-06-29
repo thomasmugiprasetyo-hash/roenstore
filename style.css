@@ -6,6 +6,15 @@ font-family:Arial,sans-serif;
 }
 
 
+html,body{
+
+width:100%;
+
+overflow-x:hidden;
+
+}
+
+
 body{
 background:#0f172a;
 color:white;
@@ -64,7 +73,6 @@ border:none;
 
 
 
-
 /* PRODUK */
 
 .products{
@@ -117,6 +125,12 @@ padding:12px;
 
 font-size:16px;
 
+min-height:55px;
+
+display:flex;
+
+align-items:center;
+
 }
 
 
@@ -134,7 +148,8 @@ color:#ccc;
 
 
 
-/* AREA TOMBOL */
+
+/* TOMBOL */
 
 .buyArea{
 
@@ -189,8 +204,6 @@ border-radius:10px;
 font-size:18px;
 
 }
-
-
 
 
 
@@ -318,106 +331,21 @@ border-radius:10px;
 
 
 
-/* HP */
-
-@media(max-width:600px){
-
-
-nav{
-
-flex-direction:column;
-
-gap:10px;
-
-padding:15px;
-
-}
-
-
-
-.menu{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-
-
-.menu a{
-
-margin:5px;
-
-font-size:13px;
-
-}
-
-
-
-
-.products{
-
-grid-template-columns:repeat(2,1fr);
-
-gap:10px;
-
-padding:10px;
-
-}
-
-
-
-.card{
-
-min-height:360px;
-
-}
-
-
-
-.card img{
-
-aspect-ratio:1/1;
-
-height:auto;
-
-}
-
-
-
-.card h2{
-
-font-size:14px;
-
-}
-
-
-.buyBtn{
-
-font-size:11px;
-
-}
-
-
-}
-
-/* ================= */
 /* DETAIL PRODUK */
-/* ================= */
-
 
 .detail{
+
+width:100%;
 
 max-width:500px;
 
 margin:auto;
 
-padding:25px;
+padding:20px;
 
 text-align:center;
+
+overflow:hidden;
 
 }
 
@@ -425,15 +353,19 @@ text-align:center;
 
 .detail img{
 
-width:100%;
+width:90%;
 
-max-width:420px;
+max-width:350px;
 
 aspect-ratio:1/1;
 
 object-fit:cover;
 
 border-radius:20px;
+
+display:block;
+
+margin:auto;
 
 }
 
@@ -474,15 +406,73 @@ padding:10px;
 
 
 
-.detail .buyArea{
 
-margin-top:25px;
+/* HP */
+
+@media(max-width:600px){
+
+
+nav{
+
+flex-direction:column;
+
+gap:10px;
+
+padding:15px;
 
 }
 
 
+.menu{
 
-@media(max-width:600px){
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+
+.menu a{
+
+margin:5px;
+
+font-size:13px;
+
+}
+
+
+.products{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:10px;
+
+padding:10px;
+
+}
+
+
+.card{
+
+min-height:360px;
+
+}
+
+
+.card h2{
+
+font-size:14px;
+
+}
+
+
+.buyBtn{
+
+font-size:11px;
+
+}
 
 
 .detail{
@@ -494,7 +484,7 @@ padding:15px;
 
 .detail img{
 
-max-width:350px;
+width:85%;
 
 }
 
