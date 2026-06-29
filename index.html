@@ -29,22 +29,28 @@ ROENZ STORE
 
 
 <a href="index.html">
-🏠 Home
+Home
 </a>
 
+
+<a href="apk.html">
+APK Premium
+</a>
+
+
+<a href="canva.html">
+Canva Template
+</a>
 
 
 <a href="#">
-💳 Pembayaran
+Pembayaran
 </a>
-
 
 
 <a href="#">
-☎️ Kontak
+Kontak
 </a>
-
-
 
 
 
@@ -56,11 +62,11 @@ ROENZ STORE
 </a>
 
 
-
 </div>
 
 
 </nav>
+
 
 
 
@@ -80,7 +86,7 @@ Premium Digital Marketplace
 <p>
 
 Jual APK Premium, Canva Template,
-dan Produk Digital lainnya.
+Netflix dan Produk Digital lainnya.
 
 </p>
 
@@ -108,82 +114,219 @@ id="search"
 
 
 
-<!-- KATEGORI -->
 
 
-<section class="kategori">
-
-
-
-
-
-<div class="kategoriCard"
-
-onclick="location.href='apk.html'">
-
-
-
-<div class="icon">
-
-📱
-
-</div>
-
-
-
-<h2>
-
-APK Premium
-
-</h2>
-
-
-
-<p>
-
-Aplikasi premium murah
-
-</p>
-
-
-</div>
+<section class="products">
 
 
 
 
 
 
-
-<div class="kategoriCard"
-
-onclick="location.href='canva.html'">
+<!-- PRODUK 1 -->
 
 
+<div class="card"
 
-<div class="icon">
+onclick="lihatProduk(
 
-🎨
+'Duolingo Premium',
 
-</div>
+50000,
+
+'https://picsum.photos/500/500?1',
+
+'Duolingo Premium akses fitur lengkap tanpa batas.'
+
+)">
+
+
+
+
+
+<img src="https://picsum.photos/300/200?1">
 
 
 
 <h2>
-
-Canva Template
-
+Duolingo Premium
 </h2>
 
 
 
-<p>
+<p class="desc">
 
-Template siap pakai
+Belajar bahasa tanpa batas.
 
 </p>
 
 
+
+
+<p class="price">
+
+
+<span class="oldPrice">
+Rp 100.000
+</span>
+
+
+<br>
+
+
+<span class="newPrice">
+Rp 50.000
+</span>
+
+
+</p>
+
+
+
+
+
+<div class="buyArea">
+
+
+<button class="cartBtn"
+
+onclick="event.stopPropagation(); tambahKeranjang('Duolingo Premium',50000)">
+
+🛒
+
+</button>
+
+
+
+
+<button class="buyBtn"
+
+onclick="event.stopPropagation(); beliSekarang('Duolingo Premium',50000)">
+
+Beli Sekarang
+
+</button>
+
+
 </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PRODUK 2 -->
+
+
+
+<div class="card"
+
+onclick="lihatProduk(
+
+'Netflix Premium',
+
+35000,
+
+'https://picsum.photos/500/500?3',
+
+'Netflix Premium kualitas HD dan akun siap pakai.'
+
+)">
+
+
+
+
+
+<img src="https://picsum.photos/300/200?3">
+
+
+
+
+<h2>
+Netflix Premium
+</h2>
+
+
+
+
+<p class="desc">
+
+Streaming premium kualitas HD.
+
+</p>
+
+
+
+
+
+<p class="price">
+
+
+<span class="oldPrice">
+
+Rp 70.000
+
+</span>
+
+
+<br>
+
+
+
+<span class="newPrice">
+
+Rp 35.000
+
+</span>
+
+
+</p>
+
+
+
+
+
+<div class="buyArea">
+
+
+
+<button class="cartBtn"
+
+onclick="event.stopPropagation(); tambahKeranjang('Netflix Premium',35000)">
+
+🛒
+
+</button>
+
+
+
+
+<button class="buyBtn"
+
+onclick="event.stopPropagation(); beliSekarang('Netflix Premium',35000)">
+
+Beli Sekarang
+
+</button>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
 
 
 
