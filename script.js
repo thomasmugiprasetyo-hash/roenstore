@@ -56,9 +56,6 @@ harga:harga
 updateKeranjang();
 
 
-alert(nama+" masuk keranjang");
-
-
 console.log(keranjang);
 
 
@@ -155,7 +152,6 @@ Rp ${item.harga}
 Hapus
 
 </button>
-
 
 </p>
 
