@@ -1,14 +1,17 @@
-const search=document.getElementById("search");
+const search = document.getElementById("search");
+
 
 search.addEventListener("keyup",()=>{
 
-let value=search.value.toLowerCase();
+let value = search.value.toLowerCase();
 
-let cards=document.querySelectorAll(".card");
+let cards = document.querySelectorAll(".card");
+
 
 cards.forEach(card=>{
 
-let title=card.querySelector("h2").innerText.toLowerCase();
+let title = card.querySelector("h2").innerText.toLowerCase();
+
 
 if(title.includes(value)){
 
@@ -24,19 +27,36 @@ card.style.display="none";
 
 });
 
-let keranjang=[];
+
+
+
+
+let keranjang = [];
+
 
 
 function tambahKeranjang(nama,harga){
 
+
 keranjang.push({
+
 nama:nama,
 harga:harga
+
 });
+
+
+
+document.getElementById("jumlah").innerText = keranjang.length;
+
 
 
 alert(nama+" masuk keranjang");
 
+
+
 console.log(keranjang);
+
+
 
 }
