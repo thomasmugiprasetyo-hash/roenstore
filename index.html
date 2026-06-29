@@ -1,258 +1,105 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Roenz Store</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#111827;
+color:white;
+}
+header{
+background:#0f172a;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+.banner{
+padding:20px;
+text-align:center;
+background:#1e293b;
+}
+.banner h2{
+margin:0;
+}
+.container{
+padding:20px;
+}
+.card{
+background:#1f2937;
+padding:15px;
+margin-bottom:15px;
+border-radius:12px;
+}
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#22c55e;
+color:white;
+font-size:16px;
+font-weight:bold;
+margin-top:10px;
+}
+footer{
+text-align:center;
+padding:20px;
+color:#aaa;
+}
+a{
+text-decoration:none;
+}
+</style>
 
 </head>
-
-
 <body>
 
+<header>
+🛒 ROENZ STORE
+</header>
 
-<nav>
-
-
-<div class="logo">
-ROENZ STORE
+<div class="banner">
+<h2>Produk Digital Premium</h2>
+<p>Pembayaran QRIS • Fast Response</p>
 </div>
 
+<div class="container">
 
-
-<div class="menu">
-
-
-<a href="index.html">
-🏠 Home
+<div class="card">
+<h3>📱 Duolingo Premium</h3>
+<p>Rp50.000</p>
+<a href="https://wa.me/628813851012">
+<button>Beli Sekarang</button>
 </a>
+</div>
 
-
-<a href="apk.html">
-📱 APK Premium
+<div class="card">
+<h3>🎨 Canva Premium</h3>
+<p>Rp15.000</p>
+<a href="https://wa.me/628813851012">
+<button>Beli Sekarang</button>
 </a>
+</div>
 
-
-<a href="canva.html">
-🎨 Canva Template
+<div class="card">
+<h3>🎬 Netflix Premium</h3>
+<p>Rp35.000</p>
+<a href="https://wa.me/628813851012">
+<button>Beli Sekarang</button>
 </a>
-
-
-<a href="#">
-💳 Pembayaran
-</a>
-
-
-<a href="#">
-☎️ Kontak
-</a>
-
-
-
-<a href="#" onclick="bukaKeranjang()">
-
-🛒 Keranjang 
-<span id="jumlah">0</span>
-
-</a>
-
-
 </div>
 
-
-</nav>
-
-
-
-
-
-
-
-<section class="hero">
-
-
-<h1>
-Premium Digital Marketplace
-</h1>
-
-
-
-<p>
-
-Jual APK Premium, Canva Template,
-dan Produk Digital lainnya.
-
-</p>
-
-
-
-
-<input
-
-type="text"
-
-placeholder="Cari produk..."
-
-id="search"
-
->
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="kategori">
-
-
-
-<div class="kategoriCard"
-
-onclick="location.href='apk.html'">
-
-
-<img 
-src="https://picsum.photos/500/500?10"
-class="kategoriImg"
->
-
-
-
-<h2>
-📱 APK Premium
-</h2>
-
-
-<p>
-Aplikasi premium murah dan berkualitas.
-</p>
-
-
 </div>
-
-
-
-
-
-
-
-<div class="kategoriCard"
-
-onclick="location.href='canva.html'">
-
-
-<img 
-src="https://picsum.photos/500/500?20"
-class="kategoriImg"
->
-
-
-
-<h2>
-🎨 Canva Template
-</h2>
-
-
-<p>
-Template desain siap pakai.
-</p>
-
-
-</div>
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<div id="cartBox">
-
-
-
-<div class="cartHeader">
-
-
-<h2>
-🛒 Keranjang
-</h2>
-
-
-<button onclick="tutupKeranjang()">
-X
-</button>
-
-
-</div>
-
-
-
-<div id="isiKeranjang">
-
-Belum ada barang
-
-</div>
-
-
-
-
-<h3 id="total">
-
-Total: Rp 0
-
-</h3>
-
-
-
-
-<button onclick="checkout()">
-
-Checkout
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-
 
 <footer>
-
 © 2026 Roenz Store
-
 </footer>
 
-
-
-
-
-
-<script src="script.js"></script>
-
-
 </body>
-
 </html>
