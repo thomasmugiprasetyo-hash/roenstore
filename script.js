@@ -30,6 +30,9 @@ card.style.display="none";
 
 
 
+// =================
+// KERANJANG
+// =================
 
 let keranjang = [];
 
@@ -47,16 +50,30 @@ harga:harga
 
 
 
-document.getElementById("jumlah").innerText = keranjang.length;
+updateKeranjang();
 
 
-
-alert(nama+" masuk keranjang");
-
+alert(nama + " masuk keranjang");
 
 
 console.log(keranjang);
 
+
+}
+
+
+
+function updateKeranjang(){
+
+
+let jumlah = document.getElementById("jumlah");
+
+
+if(jumlah){
+
+jumlah.innerText = keranjang.length;
+
+}
 
 
 }
