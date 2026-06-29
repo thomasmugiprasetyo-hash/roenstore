@@ -38,7 +38,7 @@ card.style.display="none";
 let keranjang = [];
 
 
-// paksa keranjang sembunyi saat web baru dibuka
+
 window.onload = function(){
 
 let box = document.getElementById("cartBox");
@@ -68,13 +68,7 @@ harga:harga
 
 updateKeranjang();
 
-
-console.log(keranjang);
-
-
 }
-
-
 
 
 
@@ -91,9 +85,7 @@ jumlah.innerText = keranjang.length;
 
 }
 
-
 }
-
 
 
 
@@ -114,7 +106,6 @@ let isi = document.getElementById("isiKeranjang");
 
 
 let total = 0;
-
 
 
 isi.innerHTML="";
@@ -153,7 +144,7 @@ ${item.nama}
 
 Rp ${item.harga}
 
-<br><br>
+<br>
 
 <button onclick="hapusItem(${index})">
 
@@ -174,13 +165,12 @@ total += item.harga;
 
 
 
-
 document.getElementById("total").innerText =
 "Total: Rp "+total;
 
 
-}
 
+}
 
 
 
@@ -194,7 +184,6 @@ document.getElementById("cartBox").style.display="none";
 
 
 }
-
 
 
 
@@ -220,8 +209,52 @@ bukaKeranjang();
 
 
 
+// =================
+// BELI LANGSUNG
+// =================
+
+
+function beliSekarang(nama,harga){
+
+
+let konfirmasi = confirm(
+"Produk: "+nama+
+"\nHarga: Rp "+harga+
+"\n\nLanjut pembayaran?"
+);
+
+
+
+if(konfirmasi){
+
+
+alert(
+"Silahkan lanjut pembayaran untuk "+nama
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
 
 function checkout(){
+
+
+if(keranjang.length === 0){
+
+alert("Keranjang masih kosong");
+
+return;
+
+}
+
 
 
 alert("Lanjut pembayaran QRIS");
