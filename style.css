@@ -110,12 +110,15 @@ object-fit:cover;
 
 .card h2{
 
-padding:10px 12px 2px;
+padding:10px 12px 0px;
 font-size:16px;
-min-height:auto;
+line-height:1.2;
 display:block;
+margin-bottom:2px;
 
 }
+
+
 
 
 
@@ -126,11 +129,13 @@ display:block;
 padding:0 12px;
 font-size:13px;
 color:#aaa;
-line-height:1.4;
-min-height:auto;
-margin-top:2px;
+line-height:1.35;
+margin-top:0px;
+margin-bottom:5px;
 
 }
+
+
 
 
 
@@ -144,6 +149,7 @@ font-weight:bold;
 color:#3b82f6;
 
 }
+
 
 
 
