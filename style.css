@@ -16,6 +16,7 @@ color:white;
 
 
 
+
 nav{
 
 display:flex;
@@ -32,6 +33,7 @@ background:#111827;
 
 
 
+
 .logo{
 
 font-size:24px;
@@ -41,6 +43,7 @@ font-weight:bold;
 color:#3b82f6;
 
 }
+
 
 
 
@@ -56,6 +59,7 @@ margin-left:20px;
 
 
 
+
 .hero{
 
 text-align:center;
@@ -63,6 +67,7 @@ text-align:center;
 padding:60px 20px;
 
 }
+
 
 
 
@@ -76,6 +81,7 @@ margin-bottom:15px;
 
 
 
+
 .hero p{
 
 margin-bottom:20px;
@@ -83,6 +89,7 @@ margin-bottom:20px;
 color:#ccc;
 
 }
+
 
 
 
@@ -102,6 +109,7 @@ border-radius:10px;
 
 
 
+
 .products{
 
 display:grid;
@@ -113,6 +121,7 @@ gap:20px;
 padding:30px;
 
 }
+
 
 
 
@@ -130,11 +139,13 @@ transition:.3s;
 
 
 
+
 .card:hover{
 
 transform:translateY(-8px);
 
 }
+
 
 
 
@@ -146,6 +157,7 @@ width:100%;
 
 
 
+
 .card h2{
 
 padding:15px;
@@ -154,11 +166,13 @@ padding:15px;
 
 
 
+
 .card p{
 
 padding:0 15px;
 
 }
+
 
 
 
@@ -184,6 +198,7 @@ cursor:pointer;
 
 
 
+
 footer{
 
 text-align:center;
@@ -198,7 +213,12 @@ color:#999;
 
 
 
-/* POPUP KERANJANG */
+
+
+/* ================= */
+/* KERANJANG */
+/* ================= */
+
 
 #cartBox{
 
@@ -215,11 +235,11 @@ transform:translate(-50%,-50%);
 
 
 
-background:#1e293b;
+background:#111827;
 
 
 
-width:340px;
+width:360px;
 
 
 
@@ -227,11 +247,11 @@ padding:25px;
 
 
 
-border-radius:20px;
+border-radius:22px;
 
 
 
-box-shadow:0 15px 40px rgba(0,0,0,0.5);
+box-shadow:0 20px 50px rgba(0,0,0,0.6);
 
 
 
@@ -261,19 +281,39 @@ margin-bottom:20px;
 
 
 
+#isiKeranjang{
+
+
+max-height:250px;
+
+
+overflow:auto;
+
+
+}
+
+
+
+
 #isiKeranjang p{
 
 
-background:#0f172a;
+background:#1e293b;
 
 
-padding:12px;
+padding:15px;
 
 
-margin:10px 0;
+margin:12px 0;
 
 
-border-radius:12px;
+border-radius:15px;
+
+
+border:1px solid #334155;
+
+
+font-weight:bold;
 
 
 }
@@ -287,6 +327,12 @@ border-radius:12px;
 margin:20px 0;
 
 
+font-size:20px;
+
+
+color:#3b82f6;
+
+
 }
 
 
@@ -298,22 +344,32 @@ margin:20px 0;
 width:100%;
 
 
-padding:12px;
+padding:14px;
+
 
 
 background:#3b82f6;
 
 
+
 color:white;
+
 
 
 border:none;
 
 
-border-radius:12px;
+
+border-radius:15px;
+
 
 
 font-size:16px;
+
+
+
+font-weight:bold;
+
 
 
 cursor:pointer;
