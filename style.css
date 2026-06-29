@@ -99,3 +99,27 @@ text-align:center;
 padding:30px;
 color:#999;
 }
+
+#cartBox{
+
+position:fixed;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+background:white;
+
+width:300px;
+
+padding:20px;
+
+border-radius:15px;
+
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+
+z-index:999;
+
+}
