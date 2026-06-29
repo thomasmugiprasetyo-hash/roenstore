@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roenz Store</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roenz Store</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
+
 <body>
+
 
 <nav>
 
@@ -16,61 +22,95 @@
 ROENZ STORE
 </div>
 
+
 <div class="menu">
+
 <a href="#">Home</a>
 <a href="#">Produk</a>
 <a href="#">Pembayaran</a>
 <a href="#">Kontak</a>
+
 </div>
 
 </nav>
 
 
+
 <section class="hero">
 
+
 <h1>Premium Digital Marketplace</h1>
+
 
 <p>
 Jual APK Premium, Canva, Netflix,
 Template dan Produk Digital lainnya.
 </p>
 
+
 <input
 type="text"
 placeholder="Cari produk..."
 id="search">
 
+
 </section>
+
+
+
+
+<section class="products">
+
 
 
 <div class="card">
 
+
 <img src="https://picsum.photos/300/200?1">
+
 
 <h2>Duolingo Premium</h2>
 
+
 <p class="price">50000</p>
+
 
 <button onclick="tambahKeranjang('Duolingo Premium',50000)">
 Beli Sekarang
 </button>
 
+
 </div>
+
+
+
 
 
 <div class="card">
 
+
 <img src="https://picsum.photos/300/200?3">
+
 
 <h2>Netflix Premium</h2>
 
-<p>Rp 35.000</p>
 
-<button>Beli Sekarang</button>
+<p class="price">35000</p>
+
+
+<button onclick="tambahKeranjang('Netflix Premium',35000)">
+Beli Sekarang
+</button>
+
 
 </div>
 
+
+
 </section>
+
+
+
 
 
 <footer>
@@ -80,7 +120,11 @@ Beli Sekarang
 </footer>
 
 
+
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
