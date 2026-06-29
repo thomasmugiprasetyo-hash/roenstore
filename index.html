@@ -30,12 +30,15 @@ ROENZ STORE
 <a href="#">Pembayaran</a>
 <a href="#">Kontak</a>
 
-<a href="#">
+<a href="#" onclick="bukaKeranjang()">
 🛒 Keranjang <span id="jumlah">0</span>
 </a>
 
 </div>
+
 </nav>
+
+
 
 
 
@@ -58,6 +61,8 @@ id="search">
 
 
 </section>
+
+
 
 
 
@@ -116,11 +121,37 @@ Beli Sekarang
 
 
 
+
+<div id="cartBox" style="display:none;">
+
+
+<h2>Keranjang</h2>
+
+
+<div id="isiKeranjang"></div>
+
+
+<h3 id="total"></h3>
+
+
+<button onclick="checkout()">
+Checkout
+</button>
+
+
+</div>
+
+
+
+
+
+
 <footer>
 
 © 2026 Roenz Store
 
 </footer>
+
 
 
 
