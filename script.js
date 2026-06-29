@@ -1,6 +1,8 @@
 const search = document.getElementById("search");
 
 
+if(search){
+
 search.addEventListener("keyup",()=>{
 
 let value = search.value.toLowerCase();
@@ -26,6 +28,8 @@ card.style.display="none";
 });
 
 });
+
+}
 
 
 
@@ -69,6 +73,7 @@ harga:harga
 updateKeranjang();
 
 }
+
 
 
 
@@ -258,6 +263,39 @@ return;
 
 
 alert("Lanjut pembayaran QRIS");
+
+
+}
+
+
+
+
+
+
+
+// =================
+// DETAIL PRODUK
+// =================
+
+
+function lihatProduk(nama,harga,gambar,deskripsi){
+
+
+localStorage.setItem(
+"produk",
+JSON.stringify({
+
+nama:nama,
+harga:harga,
+gambar:gambar,
+deskripsi:deskripsi
+
+})
+);
+
+
+
+window.location.href="detail.html";
 
 
 }
