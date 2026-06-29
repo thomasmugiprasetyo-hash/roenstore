@@ -1,105 +1,102 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roenz Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roenz Store</title>
 
-<style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#111827;
-color:white;
-}
-header{
-background:#0f172a;
-padding:20px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
-}
-.banner{
-padding:20px;
-text-align:center;
-background:#1e293b;
-}
-.banner h2{
-margin:0;
-}
-.container{
-padding:20px;
-}
-.card{
-background:#1f2937;
-padding:15px;
-margin-bottom:15px;
-border-radius:12px;
-}
-button{
-width:100%;
-padding:12px;
-border:none;
-border-radius:10px;
-background:#22c55e;
-color:white;
-font-size:16px;
-font-weight:bold;
-margin-top:10px;
-}
-footer{
-text-align:center;
-padding:20px;
-color:#aaa;
-}
-a{
-text-decoration:none;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-🛒 ROENZ STORE
-</header>
+<nav>
 
-<div class="banner">
-<h2>Produk Digital Premium</h2>
-<p>Pembayaran QRIS • Fast Response</p>
+<div class="logo">
+ROENZ STORE
 </div>
 
-<div class="container">
+<div class="menu">
+<a href="#">Home</a>
+<a href="#">Produk</a>
+<a href="#">Pembayaran</a>
+<a href="#">Kontak</a>
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<h1>Premium Digital Marketplace</h1>
+
+<p>
+Jual APK Premium, Canva, Netflix,
+Template dan Produk Digital lainnya.
+</p>
+
+<input
+type="text"
+placeholder="Cari produk..."
+id="search">
+
+</section>
+
+
+
+<section class="products">
 
 <div class="card">
-<h3>📱 Duolingo Premium</h3>
-<p>Rp50.000</p>
-<a href="https://wa.me/628813851012">
+
+<img src="https://picsum.photos/300/200?1">
+
+<h2>Duolingo Premium</h2>
+
+<p>Rp 50.000</p>
+
 <button>Beli Sekarang</button>
-</a>
+
 </div>
+
+
 
 <div class="card">
-<h3>🎨 Canva Premium</h3>
-<p>Rp15.000</p>
-<a href="https://wa.me/628813851012">
+
+<img src="https://picsum.photos/300/200?2">
+
+<h2>Canva Pro</h2>
+
+<p>Rp 15.000</p>
+
 <button>Beli Sekarang</button>
-</a>
+
 </div>
+
+
 
 <div class="card">
-<h3>🎬 Netflix Premium</h3>
-<p>Rp35.000</p>
-<a href="https://wa.me/628813851012">
+
+<img src="https://picsum.photos/300/200?3">
+
+<h2>Netflix Premium</h2>
+
+<p>Rp 35.000</p>
+
 <button>Beli Sekarang</button>
-</a>
-</div>
 
 </div>
+
+</section>
+
 
 <footer>
+
 © 2026 Roenz Store
+
 </footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
