@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roenz Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="logo">
+ROENZ STORE
+</div>
+
+
+<div class="menu">
+
+<a href="#">Home</a>
+<a href="#">Produk</a>
+<a href="#">Pembayaran</a>
+<a href="#">Kontak</a>
+
+<a href="#" onclick="bukaKeranjang()">
+🛒 Keranjang <span id="jumlah">0</span>
+</a>
+
+</div>
+
+</nav>
+
+
+
+
+
+<section class="hero">
+
+
+<h1>Premium Digital Marketplace</h1>
+
+
+<p>
+Jual APK Premium, Canva, Netflix,
+Template dan Produk Digital lainnya.
+</p>
+
+
+<input
+type="text"
+placeholder="Cari produk..."
+id="search">
+
+
+</section>
+
+
+
+
+
+
+<section class="products">
+
+
+
+<div class="card"
+onclick="lihatProduk(
+'Duolingo Premium',
+50000,
+'https://picsum.photos/500/500?1',
+'Duolingo Premium akses fitur lengkap tanpa batas.'
+)">
+
+
+
+<img src="https://picsum.photos/300/200?1">
+
+
+<h2>Duolingo Premium</h2>
+
+
+<p class="desc">
+Duolingo Premium akses fitur lengkap tanpa batas.
+</p>
+
+
+<p class="price">
+
+<span class="oldPrice">
+Rp 100.000
+</span>
+
+<br>
+
+<span class="newPrice">
+Rp 50.000
+</span>
+
+</p>
+
+
+
+<div class="buyArea">
+
+
+<button class="cartBtn"
+onclick="event.stopPropagation(); tambahKeranjang('Duolingo Premium',50000)">
+🛒
+</button>
+
+
+
+<button class="buyBtn"
+onclick="event.stopPropagation(); beliSekarang('Duolingo Premium',50000)">
+Beli Sekarang
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card"
+onclick="lihatProduk(
+'Netflix Premium',
+35000,
+'https://picsum.photos/500/500?3',
+'Netflix Premium kualitas HD dan akun siap pakai.'
+)">
+
+
+
+
+
+<img src="https://picsum.photos/300/200?3">
+
+
+<h2>Netflix Premium</h2>
+
+
+<p class="desc">
+Netflix Premium kualitas HD dan akun siap pakai.
+</p>
+
+
+
+<p class="price">
+
+<span class="oldPrice">
+Rp 70.000
+</span>
+
+<br>
+
+<span class="newPrice">
+Rp 35.000
+</span>
+
+</p>
+
+
+
+<div class="buyArea">
+
+
+<button class="cartBtn"
+onclick="event.stopPropagation(); tambahKeranjang('Netflix Premium',35000)">
+🛒
+</button>
+
+
+
+<button class="buyBtn"
+onclick="event.stopPropagation(); beliSekarang('Netflix Premium',35000)">
+Beli Sekarang
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<div id="cartBox">
+
+
+<div class="cartHeader">
+
+
+<h2>🛒 Keranjang</h2>
+
+
+<button onclick="tutupKeranjang()">
+X
+</button>
+
+
+</div>
+
+
+<div id="isiKeranjang">
+
+Belum ada barang
+
+</div>
+
+
+<h3 id="total">
+
+Total: Rp 0
+
+</h3>
+
+
+<button onclick="checkout()">
+
+Checkout
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+<footer>
+
+© 2026 Roenz Store
+
+</footer>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
