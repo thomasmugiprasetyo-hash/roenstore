@@ -41,6 +41,7 @@ let keranjang = [];
 
 
 
+
 function tambahKeranjang(nama,harga){
 
 
@@ -52,19 +53,17 @@ harga:harga
 });
 
 
-
 updateKeranjang();
 
 
-
-alert(nama + " masuk keranjang");
+alert(nama+" masuk keranjang");
 
 
 console.log(keranjang);
 
 
-
 }
+
 
 
 
@@ -101,19 +100,7 @@ function bukaKeranjang(){
 let box = document.getElementById("cartBox");
 
 
-if(box.style.display === "none"){
-
-
-box.style.display = "block";
-
-
-}else{
-
-
-box.style.display = "none";
-
-
-}
+box.style.display="block";
 
 
 
@@ -131,7 +118,7 @@ isi.innerHTML = "";
 if(keranjang.length === 0){
 
 
-isi.innerHTML = "Keranjang masih kosong";
+isi.innerHTML="Keranjang masih kosong";
 
 
 document.getElementById("total").innerText =
@@ -147,12 +134,32 @@ return;
 
 
 
-keranjang.forEach(item=>{
+
+keranjang.forEach((item,index)=>{
 
 
-isi.innerHTML +=
+isi.innerHTML += `
 
-"<p>" + item.nama + " - Rp " + item.harga + "</p>";
+<p>
+
+${item.nama}
+
+<br>
+
+Rp ${item.harga}
+
+<br><br>
+
+<button onclick="hapusItem(${index})">
+
+Hapus
+
+</button>
+
+
+</p>
+
+`;
 
 
 
@@ -166,12 +173,59 @@ total += item.harga;
 
 
 document.getElementById("total").innerText =
-
-"Total: Rp " + total;
+"Total: Rp "+total;
 
 
 
 }
+
+
+
+
+
+
+
+// =================
+// TUTUP KERANJANG
+// =================
+
+
+function tutupKeranjang(){
+
+
+document.getElementById("cartBox").style.display="none";
+
+
+}
+
+
+
+
+
+
+
+// =================
+// HAPUS ITEM
+// =================
+
+
+function hapusItem(index){
+
+
+keranjang.splice(index,1);
+
+
+
+updateKeranjang();
+
+
+
+bukaKeranjang();
+
+
+}
+
+
 
 
 
