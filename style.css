@@ -64,8 +64,8 @@ color:#ccc;
 width:90%;
 max-width:400px;
 padding:12px;
-border:none;
 border-radius:10px;
+border:none;
 }
 
 
@@ -83,13 +83,6 @@ padding:30px;
 background:#1e293b;
 border-radius:15px;
 overflow:hidden;
-transition:.3s;
-}
-
-
-
-.card:hover{
-transform:translateY(-8px);
 }
 
 
@@ -116,12 +109,13 @@ padding:0 15px;
 margin:15px;
 width:calc(100% - 30px);
 padding:12px;
-border:none;
 background:#3b82f6;
 color:white;
+border:none;
 border-radius:10px;
-cursor:pointer;
 }
+
+
 
 
 
@@ -135,159 +129,109 @@ color:#999;
 
 
 
-
-/* ================= */
-/* KERANJANG */
-/* ================= */
+/* KERANJANG MINI */
 
 
 #cartBox{
 
-
 display:none;
 
-
 position:fixed;
-
 
 top:50%;
 
 left:50%;
 
-
 transform:translate(-50%,-50%);
-
 
 
 background:#111827;
 
 
-
-width:300px;
-
+width:230px;
 
 
-padding:18px;
+padding:12px;
 
 
-
-border-radius:18px;
-
+border-radius:15px;
 
 
-box-shadow:0 15px 40px rgba(0,0,0,0.6);
-
+box-shadow:0 10px 30px rgba(0,0,0,.5);
 
 
 z-index:9999;
 
 
-
 text-align:center;
 
-
 }
-
 
 
 
 #cartBox h2{
 
+font-size:17px;
 
 color:#3b82f6;
 
-
-margin-bottom:15px;
-
+margin-bottom:10px;
 
 }
-
 
 
 
 #isiKeranjang{
 
-
-max-height:180px;
-
+max-height:130px;
 
 overflow:auto;
 
-
-font-size:14px;
-
-
 }
-
 
 
 
 #isiKeranjang p{
 
+font-size:12px;
 
 background:#1e293b;
 
+padding:8px;
 
-padding:10px;
+margin:7px 0;
 
-
-margin:10px 0;
-
-
-border-radius:12px;
-
-
-border:1px solid #334155;
-
+border-radius:10px;
 
 }
-
 
 
 
 #total{
 
+font-size:15px;
 
-margin:15px 0;
-
-
-font-size:18px;
-
+margin:10px 0;
 
 color:#3b82f6;
 
-
 }
-
 
 
 
 #cartBox button{
 
-
-width:auto;
-
-
-padding:10px 20px;
-
+padding:8px 15px;
 
 background:#3b82f6;
 
-
 color:white;
-
 
 border:none;
 
+border-radius:10px;
 
-border-radius:12px;
-
-
-font-weight:bold;
-
-
-cursor:pointer;
-
+font-size:13px;
 
 }
 
@@ -295,10 +239,7 @@ cursor:pointer;
 
 
 
-
-/* ================= */
 /* HP */
-/* ================= */
 
 
 @media(max-width:600px){
@@ -346,4 +287,30 @@ padding:40px 15px;
 
 
 
-.hero
+.hero h1{
+
+font-size:26px;
+
+}
+
+
+
+.products{
+
+grid-template-columns:1fr;
+
+padding:15px;
+
+}
+
+
+
+#cartBox{
+
+width:230px;
+
+}
+
+
+
+}
