@@ -30,13 +30,26 @@ card.style.display="none";
 
 
 
-
 // =================
 // KERANJANG
 // =================
 
 
 let keranjang = [];
+
+
+// paksa keranjang sembunyi saat web baru dibuka
+window.onload = function(){
+
+let box = document.getElementById("cartBox");
+
+if(box){
+
+box.style.display="none";
+
+}
+
+};
 
 
 
@@ -65,6 +78,7 @@ console.log(keranjang);
 
 
 
+
 function updateKeranjang(){
 
 
@@ -86,11 +100,6 @@ jumlah.innerText = keranjang.length;
 
 
 
-// =================
-// BUKA KERANJANG
-// =================
-
-
 function bukaKeranjang(){
 
 
@@ -108,7 +117,7 @@ let total = 0;
 
 
 
-isi.innerHTML = "";
+isi.innerHTML="";
 
 
 
@@ -123,7 +132,6 @@ document.getElementById("total").innerText =
 
 
 return;
-
 
 }
 
@@ -162,7 +170,6 @@ Hapus
 total += item.harga;
 
 
-
 });
 
 
@@ -172,18 +179,12 @@ document.getElementById("total").innerText =
 "Total: Rp "+total;
 
 
-
 }
 
 
 
 
 
-
-
-// =================
-// TUTUP KERANJANG
-// =================
 
 
 function tutupKeranjang(){
@@ -200,20 +201,13 @@ document.getElementById("cartBox").style.display="none";
 
 
 
-// =================
-// HAPUS ITEM
-// =================
-
-
 function hapusItem(index){
 
 
 keranjang.splice(index,1);
 
 
-
 updateKeranjang();
-
 
 
 bukaKeranjang();
@@ -225,11 +219,6 @@ bukaKeranjang();
 
 
 
-
-
-// =================
-// CHECKOUT
-// =================
 
 
 function checkout(){
