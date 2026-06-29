@@ -124,32 +124,19 @@ Beli Sekarang
 
 <!-- KERANJANG -->
 
-<div id="cartBox" style="
-display:none;
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:#111827;
-width:340px;
-padding:25px;
-border-radius:20px;
-z-index:9999;
-">
+<div id="cartBox">
 
 
-<div style="
-display:flex;
-justify-content:space-between;
-align-items:center;
-">
+<div class="cartHeader">
 
 
 <h2>🛒 Keranjang</h2>
 
 
-<button onclick="tutupKeranjang()">
+<button onclick="document.getElementById('cartBox').style.display='none'">
+
 X
+
 </button>
 
 
@@ -157,20 +144,28 @@ X
 
 
 
+
+
 <div id="isiKeranjang">
+
 Belum ada barang
+
 </div>
 
 
 
 <h3 id="total">
+
 Total: Rp 0
+
 </h3>
 
 
 
 <button onclick="checkout()">
+
 Checkout
+
 </button>
 
 
