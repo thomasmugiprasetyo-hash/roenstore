@@ -63,6 +63,8 @@ border:none;
 
 
 
+
+
 /* PRODUK */
 
 .products{
@@ -83,11 +85,15 @@ padding:15px;
 
 background:#1e293b;
 
-border-radius:15px;
+border-radius:16px;
 
 overflow:hidden;
 
-min-height:260px;
+min-height:320px;
+
+display:flex;
+
+flex-direction:column;
 
 }
 
@@ -107,7 +113,7 @@ object-fit:cover;
 
 .card h2{
 
-padding:10px;
+padding:12px;
 
 font-size:16px;
 
@@ -117,7 +123,7 @@ font-size:16px;
 
 .card p{
 
-padding:0 10px;
+padding:0 12px;
 
 font-size:13px;
 
@@ -127,17 +133,18 @@ color:#ccc;
 
 
 
-/* TOMBOL */
+
+/* AREA TOMBOL */
 
 .buyArea{
 
 display:flex;
 
-gap:7px;
+gap:8px;
 
-padding:10px;
+padding:12px;
 
-margin-top:10px;
+margin-top:auto;
 
 }
 
@@ -147,7 +154,7 @@ margin-top:10px;
 
 flex:1;
 
-height:40px;
+height:42px;
 
 background:#3b82f6;
 
@@ -167,9 +174,9 @@ font-weight:bold;
 
 .cartBtn{
 
-width:40px;
+width:42px;
 
-height:40px;
+height:42px;
 
 background:#3b82f6;
 
@@ -179,9 +186,11 @@ border:none;
 
 border-radius:10px;
 
-font-size:17px;
+font-size:18px;
 
 }
+
+
 
 
 
@@ -328,6 +337,7 @@ padding:15px;
 }
 
 
+
 .menu{
 
 display:flex;
@@ -339,6 +349,7 @@ justify-content:center;
 }
 
 
+
 .menu a{
 
 margin:5px;
@@ -346,6 +357,8 @@ margin:5px;
 font-size:13px;
 
 }
+
+
 
 
 .products{
@@ -359,11 +372,13 @@ padding:10px;
 }
 
 
+
 .card{
 
-min-height:240px;
+min-height:300px;
 
 }
+
 
 
 .card img{
@@ -371,6 +386,7 @@ min-height:240px;
 height:130px;
 
 }
+
 
 
 .card h2{
@@ -385,5 +401,6 @@ font-size:14px;
 font-size:11px;
 
 }
+
 
 }
