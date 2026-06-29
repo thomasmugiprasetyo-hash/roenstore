@@ -49,7 +49,6 @@ harga:harga
 });
 
 
-
 updateKeranjang();
 
 
@@ -60,6 +59,7 @@ console.log(keranjang);
 
 
 }
+
 
 
 
@@ -74,6 +74,78 @@ if(jumlah){
 jumlah.innerText = keranjang.length;
 
 }
+
+
+}
+
+
+
+
+// =================
+// TAMPIL KERANJANG
+// =================
+
+
+function bukaKeranjang(){
+
+
+let box = document.getElementById("cartBox");
+
+
+box.style.display="block";
+
+
+
+let isi = document.getElementById("isiKeranjang");
+
+
+let total = 0;
+
+
+
+isi.innerHTML="";
+
+
+
+keranjang.forEach(item=>{
+
+
+isi.innerHTML += `
+
+<p>
+${item.nama} - Rp ${item.harga}
+</p>
+
+`;
+
+
+total += item.harga;
+
+
+});
+
+
+
+document.getElementById("total").innerText =
+
+"Total: Rp " + total;
+
+
+
+}
+
+
+
+
+// =================
+// CHECKOUT
+// =================
+
+
+function checkout(){
+
+
+alert("Lanjut pembayaran QRIS");
 
 
 }
