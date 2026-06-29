@@ -23,3 +23,20 @@ card.style.display="none";
 });
 
 });
+
+let keranjang=[];
+
+
+function tambahKeranjang(nama,harga){
+
+keranjang.push({
+nama:nama,
+harga:harga
+});
+
+
+alert(nama+" masuk keranjang");
+
+console.log(keranjang);
+
+}
