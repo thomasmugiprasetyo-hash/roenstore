@@ -105,14 +105,62 @@ padding:0 15px;
 
 
 
-.card button{
-margin:15px;
-width:calc(100% - 30px);
+
+
+/* TOMBOL PRODUK */
+
+.buyArea{
+
+display:flex;
+
+gap:10px;
+
+padding:15px;
+
+}
+
+
+
+.buyBtn{
+
+flex:1;
+
 padding:12px;
+
 background:#3b82f6;
+
 color:white;
+
 border:none;
+
 border-radius:10px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+
+
+.cartBtn{
+
+width:45px;
+
+height:45px;
+
+background:#22c55e;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+font-size:20px;
+
+cursor:pointer;
+
 }
 
 
@@ -120,16 +168,21 @@ border-radius:10px;
 
 
 footer{
+
 text-align:center;
+
 padding:30px;
+
 color:#999;
+
 }
 
 
 
 
 
-/* KERANJANG MINI */
+
+/* KERANJANG */
 
 
 #cartBox{
@@ -164,6 +217,38 @@ z-index:9999;
 
 
 text-align:center;
+
+}
+
+
+
+.cartHeader{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+.cartHeader button{
+
+background:#ef4444;
+
+color:white;
+
+border:none;
+
+width:25px;
+
+height:25px;
+
+border-radius:50%;
+
+cursor:pointer;
 
 }
 
@@ -219,9 +304,11 @@ color:#3b82f6;
 
 
 
-#cartBox button{
+#cartBox > button{
 
-padding:8px 15px;
+padding:10px;
+
+width:100%;
 
 background:#3b82f6;
 
@@ -231,8 +318,6 @@ border:none;
 
 border-radius:10px;
 
-font-size:13px;
-
 }
 
 
@@ -240,7 +325,6 @@ font-size:13px;
 
 
 /* HP */
-
 
 @media(max-width:600px){
 
