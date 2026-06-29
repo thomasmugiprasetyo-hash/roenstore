@@ -71,7 +71,14 @@ id="search">
 
 
 
-<div class="card">
+<div class="card"
+onclick="lihatProduk(
+'Duolingo Premium',
+50000,
+'https://picsum.photos/500/500?1',
+'Duolingo Premium akses fitur lengkap tanpa batas.'
+)">
+
 
 
 <img src="https://picsum.photos/300/200?1">
@@ -80,7 +87,7 @@ id="search">
 <h2>Duolingo Premium</h2>
 
 
-<p class="price">50000</p>
+<p class="price">Rp 50.000</p>
 
 
 
@@ -88,14 +95,14 @@ id="search">
 
 
 <button class="cartBtn"
-onclick="tambahKeranjang('Duolingo Premium',50000)">
+onclick="event.stopPropagation(); tambahKeranjang('Duolingo Premium',50000)">
 🛒
 </button>
 
 
 
 <button class="buyBtn"
-onclick="beliSekarang('Duolingo Premium',50000)">
+onclick="event.stopPropagation(); beliSekarang('Duolingo Premium',50000)">
 Beli Sekarang
 </button>
 
@@ -112,7 +119,16 @@ Beli Sekarang
 
 
 
-<div class="card">
+<div class="card"
+onclick="lihatProduk(
+'Netflix Premium',
+35000,
+'https://picsum.photos/500/500?3',
+'Netflix Premium kualitas HD dan akun siap pakai.'
+)">
+
+
+
 
 
 <img src="https://picsum.photos/300/200?3">
@@ -121,7 +137,7 @@ Beli Sekarang
 <h2>Netflix Premium</h2>
 
 
-<p class="price">35000</p>
+<p class="price">Rp 35.000</p>
 
 
 
@@ -129,14 +145,14 @@ Beli Sekarang
 
 
 <button class="cartBtn"
-onclick="tambahKeranjang('Netflix Premium',35000)">
+onclick="event.stopPropagation(); tambahKeranjang('Netflix Premium',35000)">
 🛒
 </button>
 
 
 
 <button class="buyBtn"
-onclick="beliSekarang('Netflix Premium',35000)">
+onclick="event.stopPropagation(); beliSekarang('Netflix Premium',35000)">
 Beli Sekarang
 </button>
 
