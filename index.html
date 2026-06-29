@@ -34,6 +34,7 @@ ROENZ STORE
 🛒 Keranjang <span id="jumlah">0</span>
 </a>
 
+
 </div>
 
 </nav>
@@ -83,12 +84,21 @@ id="search">
 <p class="price">50000</p>
 
 
-<button onclick="tambahKeranjang('Duolingo Premium',50000)">
+
+<button onclick="beliSekarang('Duolingo Premium',50000)">
 Beli Sekarang
 </button>
 
 
+<button onclick="tambahKeranjang('Duolingo Premium',50000)">
+🛒 Keranjang
+</button>
+
+
+
 </div>
+
+
 
 
 
@@ -106,9 +116,16 @@ Beli Sekarang
 <p class="price">35000</p>
 
 
-<button onclick="tambahKeranjang('Netflix Premium',35000)">
+
+<button onclick="beliSekarang('Netflix Premium',35000)">
 Beli Sekarang
 </button>
+
+
+<button onclick="tambahKeranjang('Netflix Premium',35000)">
+🛒 Keranjang
+</button>
+
 
 
 </div>
@@ -122,9 +139,13 @@ Beli Sekarang
 
 
 
+
+
 <!-- KERANJANG -->
 
+
 <div id="cartBox">
+
 
 
 <div class="cartHeader">
@@ -133,10 +154,8 @@ Beli Sekarang
 <h2>🛒 Keranjang</h2>
 
 
-<button onclick="document.getElementById('cartBox').style.display='none'">
-
+<button onclick="tutupKeranjang()">
 X
-
 </button>
 
 
@@ -154,11 +173,13 @@ Belum ada barang
 
 
 
+
 <h3 id="total">
 
 Total: Rp 0
 
 </h3>
+
 
 
 
