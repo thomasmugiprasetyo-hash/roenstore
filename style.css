@@ -123,3 +123,56 @@ box-shadow:0 0 20px rgba(0,0,0,0.3);
 z-index:999;
 
 }
+
+#cartBox{
+
+background:#ffffff;
+
+width:320px;
+
+padding:25px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+text-align:center;
+
+font-family:Arial, sans-serif;
+
+}
+
+
+#cartBox h2{
+
+margin-top:0;
+
+}
+
+
+#isiKeranjang p{
+
+background:#f3f3f3;
+
+padding:10px;
+
+border-radius:10px;
+
+}
+
+
+#cartBox button{
+
+background:black;
+
+color:white;
+
+border:none;
+
+padding:12px 25px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
