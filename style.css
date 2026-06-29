@@ -135,100 +135,159 @@ color:#999;
 
 
 
+
+/* ================= */
 /* KERANJANG */
+/* ================= */
+
 
 #cartBox{
 
+
 display:none;
+
 
 position:fixed;
 
+
 top:50%;
+
 left:50%;
+
 
 transform:translate(-50%,-50%);
 
+
+
 background:#111827;
 
-width:360px;
 
-padding:25px;
 
-border-radius:22px;
+width:300px;
 
-box-shadow:0 20px 50px rgba(0,0,0,0.6);
+
+
+padding:18px;
+
+
+
+border-radius:18px;
+
+
+
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
+
+
 
 z-index:9999;
 
+
+
 text-align:center;
 
+
 }
+
 
 
 
 #cartBox h2{
 
+
 color:#3b82f6;
 
-margin-bottom:20px;
+
+margin-bottom:15px;
+
 
 }
+
 
 
 
 #isiKeranjang{
 
-max-height:250px;
+
+max-height:180px;
+
 
 overflow:auto;
 
+
+font-size:14px;
+
+
 }
+
 
 
 
 #isiKeranjang p{
 
+
 background:#1e293b;
 
-padding:15px;
 
-margin:12px 0;
+padding:10px;
 
-border-radius:15px;
+
+margin:10px 0;
+
+
+border-radius:12px;
+
 
 border:1px solid #334155;
 
+
 }
+
 
 
 
 #total{
 
-margin:20px 0;
 
-font-size:20px;
+margin:15px 0;
+
+
+font-size:18px;
+
 
 color:#3b82f6;
 
+
 }
+
 
 
 
 #cartBox button{
 
-width:100%;
 
-padding:14px;
+width:auto;
+
+
+padding:10px 20px;
+
 
 background:#3b82f6;
 
+
 color:white;
+
 
 border:none;
 
-border-radius:15px;
+
+border-radius:12px;
+
 
 font-weight:bold;
+
+
+cursor:pointer;
+
 
 }
 
@@ -236,7 +295,11 @@ font-weight:bold;
 
 
 
+
+/* ================= */
 /* HP */
+/* ================= */
+
 
 @media(max-width:600px){
 
@@ -252,6 +315,7 @@ padding:15px;
 }
 
 
+
 .menu{
 
 display:flex;
@@ -263,6 +327,7 @@ justify-content:center;
 }
 
 
+
 .menu a{
 
 margin:5px;
@@ -272,6 +337,7 @@ font-size:14px;
 }
 
 
+
 .hero{
 
 padding:40px 15px;
@@ -279,29 +345,5 @@ padding:40px 15px;
 }
 
 
-.hero h1{
 
-font-size:26px;
-
-}
-
-
-.products{
-
-grid-template-columns:1fr;
-
-padding:15px;
-
-}
-
-
-#cartBox{
-
-width:90%;
-
-max-width:330px;
-
-}
-
-
-}
+.hero
