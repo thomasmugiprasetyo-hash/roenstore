@@ -30,11 +30,14 @@ card.style.display="none";
 
 
 
+
 // =================
 // KERANJANG
 // =================
 
+
 let keranjang = [];
+
 
 
 
@@ -49,13 +52,16 @@ harga:harga
 });
 
 
+
 updateKeranjang();
+
 
 
 alert(nama + " masuk keranjang");
 
 
 console.log(keranjang);
+
 
 
 }
@@ -81,8 +87,11 @@ jumlah.innerText = keranjang.length;
 
 
 
+
+
+
 // =================
-// TAMPIL KERANJANG
+// BUKA KERANJANG
 // =================
 
 
@@ -92,7 +101,19 @@ function bukaKeranjang(){
 let box = document.getElementById("cartBox");
 
 
-box.style.display="block";
+if(box.style.display === "none"){
+
+
+box.style.display = "block";
+
+
+}else{
+
+
+box.style.display = "none";
+
+
+}
 
 
 
@@ -103,26 +124,44 @@ let total = 0;
 
 
 
-isi.innerHTML="";
+isi.innerHTML = "";
+
+
+
+if(keranjang.length === 0){
+
+
+isi.innerHTML = "Keranjang masih kosong";
+
+
+document.getElementById("total").innerText =
+"Total: Rp 0";
+
+
+return;
+
+
+}
+
+
 
 
 
 keranjang.forEach(item=>{
 
 
-isi.innerHTML += `
+isi.innerHTML +=
 
-<p>
-${item.nama} - Rp ${item.harga}
-</p>
+"<p>" + item.nama + " - Rp " + item.harga + "</p>";
 
-`;
 
 
 total += item.harga;
 
 
+
 });
+
 
 
 
@@ -133,6 +172,7 @@ document.getElementById("total").innerText =
 
 
 }
+
 
 
 
