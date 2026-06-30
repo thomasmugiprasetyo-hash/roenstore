@@ -22,14 +22,10 @@ ROENZ STORE
 
 <div class="menu">
 
-<a href="#">Home</a>
-<a href="#">Produk</a>
+<a href="index.html">Home</a>
+<a href="#produk">Kategori</a>
 <a href="#">Pembayaran</a>
 <a href="#">Kontak</a>
-
-<a href="#" onclick="bukaKeranjang()">
-🛒 Keranjang <span id="jumlah">0</span>
-</a>
 
 </div>
 
@@ -40,8 +36,7 @@ ROENZ STORE
 <h1>Premium Digital Marketplace</h1>
 
 <p>
-Jual APK Premium, Canva, Netflix,
-Template dan Produk Digital lainnya.
+Pilih kategori produk yang ingin kamu beli.
 </p>
 
 <input
@@ -53,7 +48,7 @@ id="search">
 
 
 
-<section class="products">
+<section class="products" id="produk">
 
 <!-- APK PREMIUM -->
 
@@ -68,10 +63,14 @@ onclick="location.href='apk.html'">
 Kumpulan APK Premium & Mod Premium siap pakai dengan update terbaru.
 </p>
 
+<p class="price">
+<span class="newPrice">25+ Produk</span>
+</p>
+
 <div class="buyArea">
 
 <button class="buyBtn">
-Lihat Produk
+Lihat Produk →
 </button>
 
 </div>
@@ -80,7 +79,7 @@ Lihat Produk
 
 
 
-<!-- TEMPLATE -->
+<!-- TEMPLATE CANVA -->
 
 <div class="card"
 onclick="location.href='template.html'">
@@ -90,13 +89,17 @@ onclick="location.href='template.html'">
 <h2>🎨 Template Canva</h2>
 
 <p class="desc">
-Ratusan template Canva Premium untuk bisnis, feed Instagram, poster, CV, dan lainnya.
+Template Canva Premium untuk bisnis, konten, poster, feed, CV dan lainnya.
+</p>
+
+<p class="price">
+<span class="newPrice">120+ Template</span>
 </p>
 
 <div class="buyArea">
 
 <button class="buyBtn">
-Lihat Produk
+Lihat Produk →
 </button>
 
 </div>
@@ -115,13 +118,17 @@ onclick="location.href='akun.html'">
 <h2>👑 Akun Premium</h2>
 
 <p class="desc">
-Netflix, Canva Pro, ChatGPT Plus, Disney+, YouTube Premium dan layanan lainnya.
+Netflix, Canva Pro, ChatGPT Plus, Disney+, YouTube Premium dan lainnya.
+</p>
+
+<p class="price">
+<span class="newPrice">15+ Produk</span>
 </p>
 
 <div class="buyArea">
 
 <button class="buyBtn">
-Lihat Produk
+Lihat Produk →
 </button>
 
 </div>
@@ -131,32 +138,6 @@ Lihat Produk
 </section>
 
 
-
-<div id="cartBox">
-
-<div class="cartHeader">
-
-<h2>🛒 Keranjang</h2>
-
-<button onclick="tutupKeranjang()">
-X
-</button>
-
-</div>
-
-<div id="isiKeranjang">
-Belum ada barang
-</div>
-
-<h3 id="total">
-Total: Rp 0
-</h3>
-
-<button onclick="checkout()">
-Checkout
-</button>
-
-</div>
 
 <footer>
 
