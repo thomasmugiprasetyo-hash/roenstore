@@ -503,19 +503,22 @@ background:#3b82f6;
 }
 
 /* ========================= */
-/* MENU HAMBURGER */
+/* SIDEBAR */
 /* ========================= */
 
 nav{
-position:relative;
+display:flex;
 justify-content:center;
+align-items:center;
+position:relative;
+padding:18px 20px;
+background:#111827;
 }
 
 .logo{
 font-size:24px;
 font-weight:bold;
 color:#3b82f6;
-text-align:center;
 }
 
 .menu{
@@ -525,30 +528,43 @@ display:none;
 .menuIcon{
 position:absolute;
 left:20px;
-font-size:28px;
+font-size:30px;
+color:#fff;
 cursor:pointer;
-color:white;
 user-select:none;
+z-index:1001;
 }
 
 .sidebar{
 position:fixed;
 top:0;
 left:-270px;
-width:250px;
+width:260px;
 height:100%;
 background:#111827;
-padding-top:70px;
 transition:.3s;
-z-index:9999;
+z-index:1002;
 box-shadow:5px 0 20px rgba(0,0,0,.5);
+overflow-y:auto;
+}
+
+.sidebar.active{
+left:0;
+}
+
+.sidebar h2{
+padding:22px;
+text-align:center;
+color:#3b82f6;
+font-size:22px;
+border-bottom:1px solid #2d3748;
 }
 
 .sidebar a{
 display:block;
 padding:16px 22px;
-color:white;
 text-decoration:none;
+color:white;
 font-size:15px;
 transition:.2s;
 }
@@ -561,37 +577,28 @@ padding-left:28px;
 .sidebar hr{
 border:none;
 border-top:1px solid #2d3748;
-margin:12px 20px;
-}
-
-.sidebar.active{
-left:0;
+margin:10px 20px;
 }
 
 #overlay{
-display:none;
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
 background:rgba(0,0,0,.45);
-z-index:9998;
+display:none;
+z-index:1001;
 }
 
 #overlay.active{
 display:block;
 }
 
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
 @media(max-width:600px){
 
 nav{
 padding:18px;
-justify-content:center;
 }
 
 .logo{
@@ -600,126 +607,7 @@ font-size:22px;
 
 .menuIcon{
 left:15px;
-font-size:26px;
+font-size:28px;
 }
 
-}
-
-/* ========================= */
-/* SIDEBAR */
-/* ========================= */
-
-nav{
-position:relative;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:18px 20px;
-background:#111827;
-}
-
-.menuIcon{
-position:absolute;
-left:20px;
-font-size:30px;
-cursor:pointer;
-color:white;
-user-select:none;
-}
-
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#3b82f6;
-}
-
-.sidebar{
-
-position:fixed;
-top:0;
-left:-280px;
-width:260px;
-height:100%;
-background:#111827;
-transition:.35s ease;
-z-index:1000;
-box-shadow:5px 0 25px rgba(0,0,0,.5);
-
-}
-
-.sidebar.active{
-
-left:0;
-
-}
-
-.sidebarHeader{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-border-bottom:1px solid #2d3748;
-
-}
-
-.sidebarHeader h2{
-
-color:#3b82f6;
-font-size:22px;
-
-}
-
-.sidebarHeader button{
-
-background:none;
-border:none;
-color:white;
-font-size:24px;
-cursor:pointer;
-
-}
-
-.sidebar a{
-
-display:block;
-padding:16px 22px;
-text-decoration:none;
-color:white;
-transition:.2s;
-
-}
-
-.sidebar a:hover{
-
-background:#1e293b;
-padding-left:28px;
-
-}
-
-.sidebar hr{
-
-border:none;
-border-top:1px solid #2d3748;
-margin:10px 20px;
-
-}
-
-#overlay{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.45);
-display:none;
-z-index:999;
-
-}
-
-#overlay.active{
-
-display:block;
-
-}
+  }
