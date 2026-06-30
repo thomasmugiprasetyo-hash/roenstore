@@ -27,16 +27,39 @@ card.style.display="none";
 
 
 // =================
-// MENU HAMBURGER
+// SIDEBAR
 // =================
 
 function toggleMenu(){
 
-const menu = document.getElementById("menu");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
 
-menu.classList.toggle("show");
+sidebar.classList.toggle("show");
+overlay.classList.toggle("show");
 
 }
+
+// Tutup sidebar jika klik di luar
+document.addEventListener("click",function(e){
+
+const sidebar=document.getElementById("sidebar");
+const menuIcon=document.querySelector(".menuIcon");
+const overlay=document.getElementById("overlay");
+
+if(
+sidebar &&
+sidebar.classList.contains("show") &&
+!sidebar.contains(e.target) &&
+!menuIcon.contains(e.target)
+){
+
+sidebar.classList.remove("show");
+overlay.classList.remove("show");
+
+}
+
+});
 
 
 
