@@ -25,251 +25,112 @@ card.style.display="none";
 }
 
 
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
 
-// =================
-// SIDEBAR
-// =================
-
-function toggleMenu(){
-
-const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("overlay");
-
-sidebar.classList.toggle("show");
-overlay.classList.toggle("show");
-
+nav{
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+padding:18px 20px;
+background:#111827;
 }
 
-// Tutup sidebar jika klik di luar
-document.addEventListener("click",function(e){
-
-const sidebar=document.getElementById("sidebar");
-const menuIcon=document.querySelector(".menuIcon");
-const overlay=document.getElementById("overlay");
-
-if(
-sidebar &&
-sidebar.classList.contains("show") &&
-!sidebar.contains(e.target) &&
-!menuIcon.contains(e.target)
-){
-
-sidebar.classList.remove("show");
-overlay.classList.remove("show");
-
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#3b82f6;
 }
 
-});
-
-
-
-// =================
-// KERANJANG
-// =================
-
-let keranjang = [];
-
-window.onload = function(){
-
-let box = document.getElementById("cartBox");
-
-if(box){
-box.style.display="none";
+.menu{
+display:none;
 }
 
-};
-
-function tambahKeranjang(nama,harga){
-
-keranjang.push({
-nama:nama,
-harga:harga
-});
-
-updateKeranjang();
-
+.menuIcon{
+position:absolute;
+left:20px;
+font-size:30px;
+color:#fff;
+cursor:pointer;
+user-select:none;
+z-index:1001;
 }
 
-function updateKeranjang(){
-
-let jumlah = document.getElementById("jumlah");
-
-if(jumlah){
-jumlah.innerText = keranjang.length;
+.sidebar{
+position:fixed;
+top:0;
+left:-270px;
+width:260px;
+height:100%;
+background:#111827;
+transition:.3s;
+z-index:1002;
+box-shadow:5px 0 20px rgba(0,0,0,.5);
+overflow-y:auto;
 }
 
+.sidebar.active{
+left:0;
 }
 
-function bukaKeranjang(){
-
-let box = document.getElementById("cartBox");
-
-box.style.display="block";
-
-let isi = document.getElementById("isiKeranjang");
-
-let total = 0;
-
-isi.innerHTML="";
-
-if(keranjang.length === 0){
-
-isi.innerHTML="Keranjang masih kosong";
-
-document.getElementById("total").innerText =
-"Total: Rp 0";
-
-return;
-
+.sidebar h2{
+padding:22px;
+text-align:center;
+color:#3b82f6;
+font-size:22px;
+border-bottom:1px solid #2d3748;
 }
 
-keranjang.forEach((item,index)=>{
-
-isi.innerHTML += `
-
-<p>
-
-${item.nama}
-
-<br>
-
-Rp ${item.harga}
-
-<br>
-
-<button onclick="hapusItem(${index})">
-
-Hapus
-
-</button>
-
-</p>
-
-`;
-
-total += item.harga;
-
-});
-
-document.getElementById("total").innerText =
-"Total: Rp "+total;
-
+.sidebar a{
+display:block;
+padding:16px 22px;
+text-decoration:none;
+color:white;
+font-size:15px;
+transition:.2s;
 }
 
-function tutupKeranjang(){
-
-document.getElementById("cartBox").style.display="none";
-
+.sidebar a:hover{
+background:#1e293b;
+padding-left:28px;
 }
 
-function hapusItem(index){
-
-keranjang.splice(index,1);
-
-updateKeranjang();
-
-bukaKeranjang();
-
+.sidebar hr{
+border:none;
+border-top:1px solid #2d3748;
+margin:10px 20px;
 }
 
-
-
-// =================
-// BELI LANGSUNG
-// =================
-
-function beliSekarang(nama,harga){
-
-let konfirmasi = confirm(
-"Produk: "+nama+
-"\nHarga: Rp "+harga+
-"\n\nLanjut pembayaran?"
-);
-
-if(konfirmasi){
-
-alert(
-"Silahkan lanjut pembayaran untuk "+nama
-);
-
+#overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.45);
+display:none;
+z-index:1001;
 }
 
+#overlay.active{
+display:block;
 }
 
-function checkout(){
+@media(max-width:600px){
 
-if(keranjang.length === 0){
-
-alert("Keranjang masih kosong");
-
-return;
-
+nav{
+padding:18px;
 }
 
-alert("Lanjut pembayaran QRIS");
-
+.logo{
+font-size:22px;
 }
 
-
-
-// =================
-// DETAIL PRODUK
-// =================
-
-function lihatProduk(nama,harga,gambar,deskripsi){
-
-localStorage.setItem(
-"produk",
-JSON.stringify({
-
-nama:nama,
-harga:harga,
-gambar:gambar,
-deskripsi:deskripsi
-
-})
-);
-
-window.location.href="detail.html";
-
+.menuIcon{
+left:15px;
+font-size:28px;
 }
-
-
-
-// =================
-// FILTER
-// =================
-
-function filterProduk(kategori){
-
-let cards=document.querySelectorAll(".card");
-
-cards.forEach(card=>{
-
-if(kategori==="all"){
-
-card.style.display="flex";
-
-}else{
-
-if(card.dataset.kategori===kategori){
-
-card.style.display="flex";
-
-}else{
-
-card.style.display="none";
-
-}
-
-}
-
-});
-
-let tombol=document.querySelectorAll(".kategori button");
-
-tombol.forEach(btn=>btn.classList.remove("aktif"));
-
-event.target.classList.add("aktif");
 
 }
