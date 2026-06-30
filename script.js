@@ -299,3 +299,37 @@ window.location.href="detail.html";
 
 
 }
+
+function filterProduk(kategori){
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+if(kategori==="all"){
+
+card.style.display="flex";
+
+}else{
+
+if(card.dataset.kategori===kategori){
+
+card.style.display="flex";
+
+}else{
+
+card.style.display="none";
+
+}
+
+}
+
+});
+
+let tombol=document.querySelectorAll(".kategori button");
+
+tombol.forEach(btn=>btn.classList.remove("aktif"));
+
+event.target.classList.add("aktif");
+
+}
