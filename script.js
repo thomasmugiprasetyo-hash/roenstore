@@ -1,6 +1,5 @@
 const search = document.getElementById("search");
 
-
 if(search){
 
 search.addEventListener("keyup",()=>{
@@ -9,20 +8,14 @@ let value = search.value.toLowerCase();
 
 let cards = document.querySelectorAll(".card");
 
-
 cards.forEach(card=>{
 
 let title = card.querySelector("h2").innerText.toLowerCase();
 
-
 if(title.includes(value)){
-
 card.style.display="block";
-
 }else{
-
 card.style.display="none";
-
 }
 
 });
@@ -31,6 +24,19 @@ card.style.display="none";
 
 }
 
+
+
+// =================
+// MENU HAMBURGER
+// =================
+
+function toggleMenu(){
+
+const menu = document.getElementById("menu");
+
+menu.classList.toggle("show");
+
+}
 
 
 
@@ -38,106 +44,63 @@ card.style.display="none";
 // KERANJANG
 // =================
 
-
 let keranjang = [];
-
-
 
 window.onload = function(){
 
 let box = document.getElementById("cartBox");
 
 if(box){
-
 box.style.display="none";
-
 }
 
 };
 
-
-
-
-
 function tambahKeranjang(nama,harga){
 
-
 keranjang.push({
-
 nama:nama,
 harga:harga
-
 });
-
 
 updateKeranjang();
 
 }
 
-
-
-
-
 function updateKeranjang(){
-
 
 let jumlah = document.getElementById("jumlah");
 
-
 if(jumlah){
-
 jumlah.innerText = keranjang.length;
-
 }
 
 }
-
-
-
-
-
 
 function bukaKeranjang(){
 
-
 let box = document.getElementById("cartBox");
-
 
 box.style.display="block";
 
-
-
 let isi = document.getElementById("isiKeranjang");
-
 
 let total = 0;
 
-
 isi.innerHTML="";
-
-
 
 if(keranjang.length === 0){
 
-
 isi.innerHTML="Keranjang masih kosong";
-
 
 document.getElementById("total").innerText =
 "Total: Rp 0";
-
 
 return;
 
 }
 
-
-
-
-
-
 keranjang.forEach((item,index)=>{
-
 
 isi.innerHTML += `
 
@@ -161,56 +124,30 @@ Hapus
 
 `;
 
-
-
 total += item.harga;
 
-
 });
-
-
 
 document.getElementById("total").innerText =
 "Total: Rp "+total;
 
-
-
 }
-
-
-
-
-
 
 function tutupKeranjang(){
 
-
 document.getElementById("cartBox").style.display="none";
 
-
 }
-
-
-
-
-
 
 function hapusItem(index){
 
-
 keranjang.splice(index,1);
-
 
 updateKeranjang();
 
-
 bukaKeranjang();
 
-
 }
-
-
-
 
 
 
@@ -218,9 +155,7 @@ bukaKeranjang();
 // BELI LANGSUNG
 // =================
 
-
 function beliSekarang(nama,harga){
-
 
 let konfirmasi = confirm(
 "Produk: "+nama+
@@ -228,29 +163,17 @@ let konfirmasi = confirm(
 "\n\nLanjut pembayaran?"
 );
 
-
-
 if(konfirmasi){
-
 
 alert(
 "Silahkan lanjut pembayaran untuk "+nama
 );
 
-
 }
 
-
 }
-
-
-
-
-
-
 
 function checkout(){
-
 
 if(keranjang.length === 0){
 
@@ -260,16 +183,9 @@ return;
 
 }
 
-
-
 alert("Lanjut pembayaran QRIS");
 
-
 }
-
-
-
-
 
 
 
@@ -277,9 +193,7 @@ alert("Lanjut pembayaran QRIS");
 // DETAIL PRODUK
 // =================
 
-
 function lihatProduk(nama,harga,gambar,deskripsi){
-
 
 localStorage.setItem(
 "produk",
@@ -293,12 +207,15 @@ deskripsi:deskripsi
 })
 );
 
-
-
 window.location.href="detail.html";
 
-
 }
+
+
+
+// =================
+// FILTER
+// =================
 
 function filterProduk(kategori){
 
