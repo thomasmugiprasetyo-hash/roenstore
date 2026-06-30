@@ -30,29 +30,45 @@ ROENZ STORE
 
 <div id="sidebar" class="sidebar">
 
+<div class="sidebarHeader">
+
 <h2>ROENZ STORE</h2>
 
-<a href="index.html">Home</a>
-
-<a href="#produk" onclick="toggleMenu()">Kategori</a>
-
-<a href="#">Kontak Admin</a>
-
-<hr>
-
-<a href="apk.html">APK Premium</a>
-
-<a href="template.html">Template Canva</a>
-
-<a href="akun.html">Akun Premium</a>
+<button onclick="toggleMenu()">✕</button>
 
 </div>
 
-<!-- BACKGROUND GELAP -->
+<a href="index.html" onclick="toggleMenu()">
+Home
+</a>
+
+<a href="#produk" onclick="toggleMenu()">
+Kategori
+</a>
+
+<a href="#">
+Kontak Admin
+</a>
+
+<hr>
+
+<a href="apk.html">
+APK Premium
+</a>
+
+<a href="template.html">
+Template Canva
+</a>
+
+<a href="akun.html">
+Akun Premium
+</a>
+
+</div>
+
+<!-- OVERLAY -->
 
 <div id="overlay" onclick="toggleMenu()"></div>
-
-
 
 <section class="hero">
 
@@ -68,8 +84,6 @@ placeholder="Cari kategori..."
 id="search">
 
 </section>
-
-
 
 <section class="products" id="produk">
 
@@ -96,9 +110,7 @@ Lihat Produk
 
 </div>
 
-
-
-<!-- TEMPLATE CANVA -->
+<!-- TEMPLATE -->
 
 <div class="card"
 onclick="location.href='template.html'">
@@ -120,8 +132,6 @@ Lihat Produk
 </div>
 
 </div>
-
-
 
 <!-- AKUN PREMIUM -->
 
@@ -147,8 +157,6 @@ Lihat Produk
 </div>
 
 </section>
-
-
 
 <footer>
 
